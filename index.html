@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Manual Assistant</title>
+</head>
+<body>
+    <h1>Motorcycle Manual Assistant</h1>
+    <form action="/calculate" method="POST">
+        <label for="brand">Select your motorcycle brand:</label>
+        <select id="brand" name="brand">
+            {% for brand in brands %}
+            <option value="{{ brand }}">{{ brand }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="model">Enter your motorcycle model:</label>
+        <input type="text" id="model" name="model">
+        <br><br>
+        <label for="question">What's your question?</label>
+        <input type="text" id="question" name="question">
+        <br><br>
+        <button type="submit">Ask Question</button>
+    </form>
+</body>
+</html>
